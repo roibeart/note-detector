@@ -2,7 +2,7 @@
 
 A framework-agnostic javascript library to detect notes in real time from the microphone of the device.
 
-Based on the wonderful [PitchDetect](https://github.com/cwilso/PitchDetect) project by @cwilso
+Based on the wonderful [PitchDetect](https://github.com/cwilso/PitchDetect) project by [cwilso](https://github.com/cwilso).
 
 ## How to use
 
@@ -46,4 +46,4 @@ The event captured has a `detail` property that contains data of the sound captu
 
 ## Example
 
-Check the index.html file for a working example.
+Check the index.html file for a working example, or try it live [here](https://roibeart.github.io/note-detector/).
