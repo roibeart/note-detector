@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Note detector example</title>
+    <style>
+        body{font-family: sans-serif;}
+    </style>
+</head>
+<body>
+    <p>
+        Click start, play some sounds and see on the console what is detected.
+    </p>
+    <button onclick="onStart()">START</button>
+    <button onclick="onStop()">STOP</button>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./note-detector.js"></script>
+    <script>
+        var noteDetector = new NoteDetector();
+
+        function onStart(){
+            noteDetector.getLiveInput();
+        }
+
+        function onStop(){
+            noteDetector.stopLiveInput();
+        }
+
+        window.addEventListener("noteDetector.soundEvent", function (e) {
+            console.log(e.detail);
+        });
+    </script>
+</body>
